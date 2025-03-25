@@ -9,7 +9,9 @@ type HeroCMS = {
 
 export default async function Home() {
 
-  const m_response = await fetch("http://localhost:8080/");
+  const m_response = await fetch(
+    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080/"
+  );
 
   const m_data: HeroCMS = await m_response.json();
 
