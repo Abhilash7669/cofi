@@ -9,7 +9,7 @@ export default function loading({}: Props) {
     >
       <svg
         aria-hidden="true"
-        className="inline w-10 h-10 mr-2 text-gray-200 animate-spin fill-[#4F21A1]"
+        className="inline w-10 h-10 mr-2 text-gray-200 animate-spin fill-accent"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
