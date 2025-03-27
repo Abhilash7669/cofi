@@ -22,7 +22,7 @@ export default function Skeleton({ count }: Props) {
       {array.map((_, i) => (
         <li
           key={i}
-          className={`h-80 bg-gray-200 rounded-md dark:bg-gray-300 max-w-full`}
+          className={`h-16 bg-gray-200 rounded-md dark:bg-gray-300 max-w-full`}
         />
       ))}
     </ul>

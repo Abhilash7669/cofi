@@ -1,40 +1,15 @@
-import Image from "next/image";
+import Hero from "@/components/landing-page/hero";
+import getAxios from "@/types/api/getAxios";
+import { HeroCMS } from "@/types/landing-page/hero";
 
-type HeroCMS = {
-  title: string;
-  description: string;
-  tag: string;
-  image: string;
-}
 
 export default async function Home() {
 
-  const m_response = await fetch(
-    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080/"
-  );
-
-  const m_data: HeroCMS = await m_response.json();
+  const data = await getAxios<HeroCMS>("http://localhost:8080");
 
   return (
-    <MyComponent content={m_data} />
+    <Hero content={data} />
   );
 }
 
-function MyComponent({ content }: { content: HeroCMS }) {
-  return (
-    <div className="min-h-screen">
-      <p>
-        {content.tag ? content.tag : "Tag"}
-      </p>
-      <p>{content?.title ? content.title : "Fetching title..."}</p>
-      <p>
-        {content.description ? content.description : "Fetching description"}
-      </p>
-      {content?.image ? (
-        <Image height={500} width={500} src={content.image} alt="image" />
-      ) : (
-        <p>Fetching Image...</p>
-      )}
-    </div>
-  );
-}
+
