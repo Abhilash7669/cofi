@@ -26,6 +26,7 @@
 
   --color-border: hsla(0, 0%, 87%, 1);
   --color-accent: hsla(26, 40%, 39%, 1);
+  --color-button: hsla(26, 40%, 39%, 1);
   --color-card: hsla(0, 0%, 100%, 1);
   --color-footer: hsla(210, 17%, 98%, 1);
 }

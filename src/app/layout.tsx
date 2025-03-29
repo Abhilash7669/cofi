@@ -25,10 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body data-theme="light" className={`${lora.variable} ${outfit.variable} antialiased`}>
-        <MainLayout>
-          {children}
-        </MainLayout>
+      <body
+        data-theme="light"
+        className={`${lora.variable} ${outfit.variable} antialiased bg-background`}
+      >
+        <MainLayout className="max-w-[2200px] mx-auto">{children}</MainLayout>
       </body>
     </html>
   );

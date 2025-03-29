@@ -1,22 +1,34 @@
 import Image from "next/image";
 import { HeroCMS } from "@/types/landing-page/hero";
 
-export default function Hero({ content }: { content: HeroCMS }) {
+type Props = {
+  content: HeroCMS
+}
 
+export default function Hero({ content }: Props) {
   return (
-    <div className="min-h-screen bg-background">
-      <p className="font-outfit">{content.tag ? content.tag : "Tag"}</p>
-      <p className="font-lora">
-        {content?.title ? content.title : "Fetching title..."}
-      </p>
-      <p className="font-outfit">
-        {content.description ? content.description : "Fetching description"}
-      </p>
-      {content?.image ? (
-        <Image height={500} width={500} src={content.image} alt="image" />
-      ) : (
-        <p>Fetching Image...</p>
-      )}
+    <div className="flex items-center justify-between">
+      <div>
+        <p className="font-outfit text-foreground">
+          {content.tag ? content.tag : "Tag"}
+        </p>
+        <p className="font-lora text-primary">
+          {content?.title ? content.title : "Fetching title..."}
+        </p>
+        <p className="font-outfit text-foreground">
+          {content.description ? content.description : "Fetching description"}
+        </p>
+        <p className="bg-button text-white">
+          Find your coffee
+        </p>
+      </div>
+      <div className="overflow-hidden relative h-[40vw] max-h-[700px] rounded-full w-[400px]">
+        {content?.image ? (
+          <Image fill className="object-cover" src={content.image} alt="image" />
+        ) : (
+          <p>Fetching Image...</p>
+        )}
+      </div>
     </div>
   );
 }
