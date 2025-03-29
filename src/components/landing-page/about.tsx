@@ -4,7 +4,7 @@ type Props = {
     content: AboutCMS
 }
 
-export default function About({ content }: Props) {
+export default function About({ }: Props) {
   return (
     <div>about</div>
   )
