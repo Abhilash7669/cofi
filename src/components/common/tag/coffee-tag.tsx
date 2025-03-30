@@ -9,7 +9,7 @@ export default function CoffeeTag({ tag= "" }: Props) {
 
   return (
     <div className="flex items-center gap-1">
-      <p className="font-outfit text-foreground text-lg">
+      <p className="font-outfit text-foreground text-base sm:text-lg">
         {tag ? tag : "Tag"}
       </p>
       <div className="relative h-7 w-7">

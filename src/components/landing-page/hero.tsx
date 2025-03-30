@@ -12,11 +12,11 @@ export default function Hero({ content }: Props) {
     <div className="flex flex-col lg:flex-row items-center justify-between">
       <div className="w-full lg:w-[78%]">
         <CoffeeTag tag={content.tag} />
-        <div className="space-y-1">
-          <h1 className="font-lora text-primary font-bold text-7xl md:text-8xl max-w-[12ch]">
+        <div className="space-y-2 lg:space-y-1">
+          <h1 className="font-lora text-primary font-bold text-5xl sm:text-7xl md:text-8xl max-w-[12ch]">
             {content?.title ? content.title : "Fetching title..."}
           </h1>
-          <p className="font-outfit text-foreground text-lg max-w-[45ch] leading-6">
+          <p className="font-outfit text-foreground text-base sm:text-lg max-w-[45ch] leading-6">
             {content.description
               ? `${content.description} ☕`
               : "Fetching description"}
