@@ -4,7 +4,9 @@ import getAxios from "@/lib/api/getAxios";
 import { HomeCMS } from "@/lib/types/landing-page/hero";
 
 export default async function Home() {
-  const { hero, about } = await getAxios<HomeCMS>("http://localhost:8080");
+  const { hero, about } = await getAxios<HomeCMS>(
+    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080"
+  );
 
   return (
     <main className="pt-12 w-[92%] mx-auto">
