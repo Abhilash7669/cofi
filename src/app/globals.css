@@ -1,3 +1,8 @@
+:root {
+  --quint: cubic-bezier(0.85, 0, 0.15, 1);
+  --quart: cubic-bezier(0.76, 0.00, 0.24, 1.00);
+}
+
 * {
   @apply transition-colors duration-200
 }
@@ -7,11 +12,44 @@
 @tailwind utilities;
 @import "tw-animate-css";
 
-/* @custom-variant dark (&:is(.dark *)); */
+
+
 
 @layer base {
   body {
     @apply overflow-x-hidden
+  }
+}
+
+@layer utilities {
+
+  @keyframes to-left {
+    0% {
+      transform: rotate(120deg);
+      left: 48%;
+    }
+    100% {
+      left: 2%;
+      transform: rotate(0deg);
+    }
+  }
+
+  .to-left {
+    animation: to-left 0.3s var(--quint) forwards;
+  }
+
+  @keyframes to-right {
+    0% {
+      left: 0%;
+      transform: rotate(0deg);
+    }
+    100% {
+      left: 48%;
+      transform: rotate(120deg);
+    }
+  }
+  .to-right {
+    animation: to-right 0.3s var(--quint) forwards;
   }
 }
 
