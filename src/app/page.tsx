@@ -5,7 +5,7 @@ import { HomeCMS } from "@/lib/types/landing-page/hero";
 
 export default async function Home() {
   const { hero, about } = await getAxios<HomeCMS>(
-    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080"
+    process.env.NEXT_PUBLIC_API_BASE_URL ? process.env.NEXT_PUBLIC_API_BASE_URL : ""
   );
 
   return (
