@@ -9,7 +9,7 @@ export default async function Home() {
   );
 
   return (
-    <main className="pt-12 w-[92%] mx-auto space-y-12">
+    <main className="pt-24 lg:pt-12 w-[92%] mx-auto space-y-24">
       <Hero content={hero} />
       <About content={about} />
     </main>

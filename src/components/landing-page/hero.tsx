@@ -2,25 +2,29 @@ import { HeroCMS } from "@/lib/types/landing-page/hero";
 import ButtonBase from "@/components/common/button/button-base";
 import Image from "next/image";
 import CoffeeTag from "@/components/common/tag/coffee-tag";
+import Text from "@/components/common/text/text";
 
 type Props = {
   content: HeroCMS;
 };
 
 export default function Hero({ content }: Props) {
+
+  if(!content) return <section className="bg-background text-primary">No Hero content!</section>
+
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between">
+    <section className="flex flex-col lg:flex-row items-center justify-between">
       <div className="w-full lg:w-[78%]">
-        <CoffeeTag tag={content.tag} />
+        <CoffeeTag className="mb-4 lg:mb-0" tag={content.tag} />
         <div className="space-y-2 lg:space-y-1">
-          <h1 className="font-lora text-primary font-bold text-5xl sm:text-7xl md:text-8xl max-w-[12ch]">
+          <Text variant="title" className="max-w-[12ch]">
             {content?.title ? content.title : "Fetching title..."}
-          </h1>
-          <p className="font-outfit text-foreground text-base sm:text-lg max-w-[45ch] leading-6">
+          </Text>
+          <Text variant="body" className="max-w-[45ch]">
             {content.description
               ? `${content.description} ☕`
               : "Fetching description"}
-          </p>
+          </Text>
         </div>
         <ButtonBase className="mt-6" />
       </div>
@@ -36,6 +40,6 @@ export default function Hero({ content }: Props) {
           <p>Fetching Image...</p>
         )}
       </div>
-    </div>
+    </section>
   );
 }
