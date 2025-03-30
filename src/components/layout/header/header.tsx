@@ -1,5 +1,6 @@
 import ThemeSwitcher from "@/components/layout/header/theme-switcher";
 import CofiLogo from "@/components/logo-svg/cofi-logo";
+import { Button } from "@/components/ui/button";
 import { FaChevronDown } from "react-icons/fa";
 
 type Props = object;
@@ -19,7 +20,14 @@ export default function Header({ }: Props) {
                 size={12}
               />
             </li>
-            <li className="text-accent cursor-pointer">Blog</li>
+            <li>
+              <Button
+                variant="link"
+                className="text-accent decoration-accent"
+              >
+                Blog
+              </Button>
+            </li>
             <li className="text-accent cursor-pointer">About</li>
           </ul>
         </div>
