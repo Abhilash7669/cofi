@@ -56,7 +56,7 @@ export default function CoffeeShowcaseCarousel() {
             key={item}
             className="border border-primary-dark bg-card keen-slider__slide rounded-lg"
           >
-            <div className="relative h-[20vw] max-h-80 w-full">
+            <div className="relative h-[50vw] md:h-[20vw] max-h-80 w-full">
               <Image
                 fill
                 src={DummyImg}
