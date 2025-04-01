@@ -14,11 +14,11 @@ export default async function CoffeeShowcase({ }: Props) {
 
   return (
     <section>
-      <div className="flex items-center justify-between mb-14">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-14">
         <Text variant="subheading">Find Your Flavour</Text>
         <ButtonOutline />
       </div>
-      <Tabs className="px-8 space-y-8" defaultValue="featured">
+      <Tabs className="md:px-8 space-y-8" defaultValue="featured">
         <TabsList className=" min-w-2xs h-11 p-2">
           <TabsTrigger value="featured">Featured</TabsTrigger>
           <TabsTrigger value="best-seller">Best Seller</TabsTrigger>
