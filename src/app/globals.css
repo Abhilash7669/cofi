@@ -3,6 +3,21 @@
   --quart: cubic-bezier(0.76, 0.00, 0.24, 1.00);
 }
 
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  grid-auto-columns: 33%; 
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+
 * {
   @apply transition-colors duration-200
 }
@@ -75,6 +90,16 @@
   --color-button: hsla(26, 40%, 39%, 1);
   --color-card: hsla(0, 0%, 100%, 1);
   --color-footer: hsla(210, 17%, 98%, 1);
+
+  /* theme switcher */
+  --color-theme-switcher: hsla(18, 47%, 24%, 1);
+
+  /* tabs */
+  --color-tab-background: hsla(0, 0%, 87%, 1);
+  --color-tab-item: hsla(0, 0%, 100%, 1);
+
+  /* outline button text */
+  --color-btn-outline: hsla(0, 0%, 0%, 1);
 }
 
 @layer base {
@@ -96,8 +121,19 @@
     --color-accent: hsla(39, 100%, 94%, 1);
     --color-card: hsla(37, 16%, 13%, 1);
     --color-footer: hsla(0, 0%, 8%, 1);
+
+    /* theme switcher */
+    --color-theme-switcher: hsla(34, 46%, 60%, 1);
+
+    /* tabs */
+    --color-tab-background: hsla(0, 0%, 17%, 1);
+    --color-tab-item: hsla(39, 100%, 94%, 1);
+
+    /* outline button text */
+    --color-btn-outline: hsla(0, 0%, 100%, 1);
   }
 }
+
 
 /* :root {
   --radius: 0.625rem;

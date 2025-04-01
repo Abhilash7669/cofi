@@ -1,4 +1,5 @@
 import About from "@/components/landing-page/about";
+import CoffeeShowcase from "@/components/landing-page/coffee-showcase";
 import Hero from "@/components/landing-page/hero";
 import getAxios from "@/lib/api/getAxios";
 import { HomeCMS } from "@/lib/types/landing-page/hero";
@@ -12,6 +13,7 @@ export default async function Home() {
     <main className="pt-24 lg:pt-12 w-[92%] mx-auto space-y-24">
       <Hero content={hero} />
       <About content={about} />
+      <CoffeeShowcase />
     </main>
   );
 }

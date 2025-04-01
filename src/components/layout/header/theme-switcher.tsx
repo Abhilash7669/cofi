@@ -10,17 +10,16 @@ type Props = object;
 export default function ThemeSwitcher({ }: Props) {
 
     // todo re-work theme switcher
-
     const iconContainerRef = useRef<HTMLDivElement | null>(null);
     const sunRef = useRef<HTMLDivElement | null>(null);
     const moonRef = useRef<HTMLImageElement | null>(null);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
-            const themeAttribute = document.body.getAttribute("data-theme");
-            if (themeAttribute === "light") {
-                moonRef.current?.classList.add("opacity-0");
-            }
+          const themeAttribute = document.body.getAttribute("data-theme");
+          if (themeAttribute === "light") {
+            moonRef.current?.classList.add("opacity-0");
+          }
         }
     }, []);
 
@@ -61,7 +60,7 @@ export default function ThemeSwitcher({ }: Props) {
     return (
       <button
         onClick={handleTheme}
-        className="relative h-9 w-20 rounded-full bg-primary cursor-pointer
+        className="relative h-9 w-20 rounded-full bg-theme-switcher cursor-pointer
             shadow-[inset_0_-2px_2px_0_rgba(76,47,16,0.25),inset_0_4px_4px_0_rgba(196,154,108,0.25),0_0_10px_2px_rgba(196,154,108,0.25)]"
       >
         <div
