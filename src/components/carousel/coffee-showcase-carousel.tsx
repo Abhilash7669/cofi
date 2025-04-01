@@ -49,12 +49,12 @@ export default function CoffeeShowcaseCarousel() {
   });
 
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <div ref={sliderRef} className="keen-slider">
         {[0, 1, 2].map((item) => (
           <div
             key={item}
-            className="border border-primary-dark bg-card keen-slider__slide shadow-2xl rounded-lg"
+            className="border border-primary-dark bg-card keen-slider__slide rounded-lg"
           >
             <div className="relative h-[20vw] max-h-80 w-full">
               <Image
