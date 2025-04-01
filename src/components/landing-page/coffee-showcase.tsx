@@ -14,7 +14,7 @@ export default async function CoffeeShowcase({ }: Props) {
 
   return (
     <section>
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-14">
+      <div className="flex space-y-4 md:space-y-0 flex-col md:flex-row md:items-center md:justify-between mb-14">
         <Text variant="subheading">Find Your Flavour</Text>
         <ButtonOutline />
       </div>
