@@ -66,7 +66,7 @@ export default function CoffeeShowcaseCarousel() {
             </div>
             <div className="p-6 space-y-3">
               <div className="space-y-2">
-                <p className="rounded-full border-2 border-[#ABABAB] text-[0.7rem] px-4 py-[0.15rem] bg-[#E62E31] text-white w-fit flex items-center justify-center">
+                <p className="rounded-full border-2 border-[#ABABAB] text-[0.7rem] px-4 py-[0.15rem] bg-[#374151] text-white w-fit flex items-center justify-center">
                   Instant
                 </p>
                 <div className="flex items-center justify-between">
