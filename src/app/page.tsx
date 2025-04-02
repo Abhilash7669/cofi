@@ -1,6 +1,7 @@
 import About from "@/components/landing-page/about";
 import CoffeeShowcase from "@/components/landing-page/coffee-showcase";
 import Hero from "@/components/landing-page/hero";
+import Testimonial from "@/components/landing-page/testimonial";
 import getAxios from "@/lib/api/getAxios";
 import { HomeCMS } from "@/lib/types/landing-page/hero";
 
@@ -10,10 +11,13 @@ export default async function Home() {
   );
 
   return (
-    <main className="pt-24 lg:pt-12 w-[92%] mx-auto space-y-24">
-      <Hero content={hero} />
-      <About content={about} />
-      <CoffeeShowcase />
+    <main className="space-y-24">
+      <div className="pt-24 lg:pt-12 w-[92%] mx-auto space-y-24">
+        <Hero content={hero} />
+        <About content={about} />
+        <CoffeeShowcase />
+      </div>
+      <Testimonial />
     </main>
   );
 }

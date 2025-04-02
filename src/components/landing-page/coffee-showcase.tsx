@@ -6,7 +6,8 @@ import {
 } from "@/components/ui/tabs";
 import Text from "@/components/common/text/text";
 import ButtonOutline from "@/components/common/button/button-outline";
-import CoffeeShowcaseCarousel from "@/components/carousel/coffee-showcase-carousel";
+import ShowcaseCarousel from "@/components/carousel/showcase-carousel";
+import ProductCard from "@/components/common/card/product-card";
 
 type Props = object;
 
@@ -19,14 +20,36 @@ export default async function CoffeeShowcase({ }: Props) {
         <ButtonOutline />
       </div>
       <Tabs className="md:px-8 space-y-8" defaultValue="featured">
-        <TabsList className=" min-w-2xs h-11 p-2">
-          <TabsTrigger value="featured">Featured</TabsTrigger>
-          <TabsTrigger value="best-seller">Best Seller</TabsTrigger>
+        <TabsList className=" min-w-sm h-13 p-2">
+          <TabsTrigger value="featured" className="font-outfit">
+            Featured
+          </TabsTrigger>
+          <TabsTrigger value="best-seller" className="font-outfit">
+            Best Seller
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="featured">
-          <CoffeeShowcaseCarousel />
+          <ShowcaseCarousel>
+            {[0, 1, 2].map((item) => (
+              <ProductCard
+                className="keen-slider__slide"
+                key={item}
+                item={item}
+              />
+            ))}
+          </ShowcaseCarousel>
         </TabsContent>
-        <TabsContent value="best-seller">Best sellerCards here</TabsContent>
+        <TabsContent value="best-seller">
+          <ShowcaseCarousel>
+            {[0, 1, 2].map((item) => (
+              <ProductCard
+                className="keen-slider__slide"
+                key={item}
+                item={item}
+              />
+            ))}
+          </ShowcaseCarousel>
+        </TabsContent>
       </Tabs>
     </section>
   );

@@ -100,6 +100,9 @@
 
   /* outline button text */
   --color-btn-outline: hsla(0, 0%, 0%, 1);
+
+  /* testimonial */
+  --color-testimonial: hsla(0, 0%, 100%, 1);
 }
 
 @layer base {
@@ -131,6 +134,9 @@
 
     /* outline button text */
     --color-btn-outline: hsla(0, 0%, 100%, 1);
+
+    /* testimonial */
+    --color-testimonial: hsla(34, 63%, 89%, 1);
   }
 }
 
