@@ -1,5 +1,10 @@
 import axios, { AxiosError } from "axios";
 
+/**
+ * AXIOS GET METHOD API Function
+ * @param url pass the endpoint url
+ * @returns T generic value
+ */
 export default async function getAxios<T>(url: string): Promise<T> {
 
     try {
