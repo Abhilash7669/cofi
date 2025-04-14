@@ -32,7 +32,13 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden
+    @apply overflow-x-hidden font-outfit text-base
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-lora
+  }
+  a, p, li {
+    @apply font-outfit
   }
 }
 
@@ -89,7 +95,10 @@
   --color-accent: hsla(26, 40%, 39%, 1);
   --color-button: hsla(26, 40%, 39%, 1);
   --color-card: hsla(0, 0%, 100%, 1);
-  --color-footer: hsla(210, 17%, 98%, 1);
+  --color-footer: hsla(11, 26%, 24%, 1);
+  --color-footer-foreground: hsla(0, 0%, 96%, 1);
+  --color-footer-list-title: hsla(34, 45%, 85%, 1);
+  --color-footer-list-items: hsla(24, 23%, 73%, 1);
 
   /* theme switcher */
   --color-theme-switcher: hsla(18, 47%, 24%, 1);
@@ -123,7 +132,10 @@
     --color-border: hsla(0, 0%, 17%, 1);
     --color-accent: hsla(39, 100%, 94%, 1);
     --color-card: hsla(37, 16%, 13%, 1);
-    --color-footer: hsla(0, 0%, 8%, 1);
+    --color-footer: hsla(0, 0%, 7%, 0.6);
+    --color-footer-foreground: hsla(34, 63%, 89%, 1);
+    --color-footer-list-title: hsla(15, 20%, 69%, 1);
+    --color-footer-list-items: hsla(19, 14%, 48%, 1);
 
     /* theme switcher */
     --color-theme-switcher: hsla(34, 46%, 60%, 1);

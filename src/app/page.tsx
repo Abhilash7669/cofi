@@ -2,7 +2,7 @@ import About from "@/components/landing-page/about";
 import CoffeeShowcase from "@/components/landing-page/coffee-showcase";
 import Hero from "@/components/landing-page/hero";
 import Testimonial from "@/components/landing-page/testimonial";
-import getAxios from "@/lib/api/getAxios";
+import { getAxios } from "@/lib/api/axiosAPI";
 import { HomeCMS } from "@/lib/types/landing-page/hero";
 
 export default async function Home() {
@@ -12,7 +12,7 @@ export default async function Home() {
   );
 
   return (
-    <main className="space-y-24">
+    <main className="space-y-24 min-h-screen z-20 bg-background">
       <div className="pt-24 lg:pt-12 w-[92%] mx-auto space-y-24">
         <Hero content={hero} />
         <About content={about} />
